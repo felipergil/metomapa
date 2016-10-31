@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.metodista.metomapa.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/meto_geral"
+        android:id="@+id/img_geral"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="112dp"
+        android:id="@+id/btn_delta"
+        android:background="@drawable/bt_delta"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_lambda"
+        android:background="@drawable/bt_lambda"
+        android:layout_marginStart="31dp"
+        android:layout_alignBottom="@+id/btn_delta"
+        android:layout_toEndOf="@+id/btn_delta"
+        android:layout_marginBottom="55dp" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_omicron"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bt_omicron"
+        android:layout_toStartOf="@+id/btn_lambda"
+        android:layout_alignBottom="@+id/btn_lambda" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_capa"
+        android:background="@drawable/bt_capa"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/btn_lambda"
+        android:layout_marginStart="83dp" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_iota"
+        android:background="@drawable/bt_iota"
+        android:layout_marginStart="43dp"
+        android:layout_above="@+id/btn_capa"
+        android:layout_alignStart="@+id/btn_capa" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_cc"
+        android:background="@drawable/bt_cc"
+        android:layout_marginEnd="14dp"
+        android:layout_above="@+id/btn_iota"
+        android:layout_toStartOf="@+id/btn_iota" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_gama"
+        android:background="@drawable/bt_gama"
+        android:layout_alignStart="@+id/btn_cc"
+        android:layout_alignBottom="@+id/btn_lambda" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_psi"
+        android:background="@drawable/bt_psi"
+        android:layout_above="@+id/btn_lambda"
+        android:layout_alignStart="@+id/btn_lambda"
+        android:layout_marginStart="14dp" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_teta"
+        android:background="@drawable/bt_teta"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/btn_lambda"
+        android:layout_toEndOf="@+id/btn_iota" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="72dp"
+        android:id="@+id/btn_zeta"
+        android:background="@drawable/bt_zeta"
+        android:layout_below="@+id/btn_cc"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_alfa"
+        android:background="@drawable/bt_alfa"
+        android:layout_marginEnd="53dp"
+        android:layout_alignBaseline="@+id/btn_zeta"
+        android:layout_alignBottom="@+id/btn_zeta"
+        android:layout_toStartOf="@+id/btn_omicron" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/user_white"
+        android:id="@+id/img_user"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:text="Olá"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_ola"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/img_user"
+        android:layout_toEndOf="@+id/img_user" />
+
+    <TextView
+        android:text="Usuario Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_usuario"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_alignBottom="@+id/img_user"
+        android:layout_alignStart="@+id/txt_ola" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/user_add"
+        android:id="@+id/btn_cadastro"
+        android:background="@null"
+        android:layout_above="@+id/btn_gama"
+        android:layout_alignStart="@+id/btn_teta" />
+
+    <TextView
+        android:text="Cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_cadastro"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_below="@+id/btn_cadastro"
+        android:layout_alignStart="@+id/btn_cadastro" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/metomapa"
+        android:id="@+id/imageView4"
+        android:layout_above="@+id/btn_cc"
+        android:layout_alignEnd="@+id/btn_alfa"
+        android:layout_marginEnd="13dp" />
+
+
+</RelativeLayout>

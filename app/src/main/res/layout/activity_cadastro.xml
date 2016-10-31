@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cadastro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.metodista.metomapa.CadastroActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="83dp"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Nome *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textColor="@color/black"
+            android:id="@+id/textView8" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            tools:fontFamily="casual"
+            android:id="@+id/etxt_nome"
+            android:textSize="18sp"
+            android:hint="João da Silva" />
+
+        <TextView
+            android:text="E-mail *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textColor="@color/black"
+            android:id="@+id/textView10" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/etxt_email"
+            tools:fontFamily="casual"
+            android:textSize="18sp"
+            android:hint="joao.silva@email.com.br" />
+
+        <TextView
+            android:text="Usuário *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textColor="@color/black"
+            android:id="@+id/textView11" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            tools:fontFamily="casual"
+            android:id="@+id/etxt_usuario"
+            android:textSize="18sp"
+            android:hint="joao" />
+
+        <TextView
+            android:text="Senha *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textColor="@color/black"
+            android:id="@+id/Senha" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:textSize="18sp"
+            android:id="@+id/etxt_senha" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical" >
+
+            <Button
+                android:text="Salvar e Logar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:fontFamily="casual"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:id="@+id/btn_salvar_cadastro" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/metomapa"
+        android:id="@+id/imageView4"
+        android:layout_marginEnd="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/user"
+        android:id="@+id/imageView"
+        android:layout_marginEnd="14dp"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_toStartOf="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        tools:fontFamily="casual"
+        tools:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="68dp"
+        android:text="CADASTRO"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp" />
+
+
+</RelativeLayout>
