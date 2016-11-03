@@ -73,7 +73,7 @@
             android:maxLength="10"/>
 
         <TextView
-            android:text="Duração"
+            android:text="Hora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:fontFamily="casual"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
-            android:id="@+id/etxt_duracao"
+            android:id="@+id/etxt_hora"
             tools:fontFamily="casual"
             android:textSize="18sp"
             android:hint="02:00"
@@ -100,7 +100,8 @@
             tools:fontFamily="casual"
             android:textStyle="bold"
             tools:textColor="@color/black"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:inputType="number"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -128,7 +129,8 @@
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:id="@+id/btn_salvar_evento" />
+                android:id="@+id/btn_salvar_evento"
+                android:onClick="salvar"/>
         </LinearLayout>
 
     </LinearLayout>

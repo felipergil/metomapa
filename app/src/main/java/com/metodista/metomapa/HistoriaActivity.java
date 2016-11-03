@@ -30,47 +30,47 @@ public class HistoriaActivity extends AppCompatActivity {
 
         ImageView img_historia = (ImageView) findViewById(R.id.img_historia);
         switch (edificio){
-            case "capa":
+            case "CAPA":
                 img_historia.setImageResource(R.drawable.historia_capa);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "delta":
+            case "DELTA":
                 img_historia.setImageResource(R.drawable.historia_delta);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "alfa":
+            case "ALFA":
                 img_historia.setImageResource(R.drawable.historia_alfa);
                 txt_historia.setText("Tombado como patrimônio histórico do município de São Bernardo do Campo. O primeiro prédio construído para abrigar a Faculdade de Teologia em 1942, tendo sido o primeiro edifício educacional do município para cursos superiores. Nele funciona o Centro Otília Chaves, o programa de Relações Eclesiásticas e Missionárias, o Centro de Estudos Wesleyanos (CEW), a Coordenação Pesquisa, a Coordenação dos Cursos de Especialização, a Coordenação de Cursos Livres, e a Área de Projetos Institucionais. No edifício Alfa também estão localizados o Arquivo Histórico da Igreja Metodista, o Museu do Metodismo e o Museu de Obras Raras.");
                 break;
-            case "gama":
+            case "GAMA":
                 img_historia.setImageResource(R.drawable.historia_gama);
                 txt_historia.setText("Prédio onde está localizada a administração central da Faculdade de Teologia: a reitoria, a diretoria administrativa, a coordenação da Área Comunicação e Relações Externas e a Secretaria de Eventos e Serviços. Neste espaço também está localizado o Salão de Leitura. As dependências da reitoria contêm objetos trazidos da antiga Chácara Flora, propriedade da Igreja Metodista na cidade de São Paulo (bairro Santo Amaro), construída no início do século XX com o apoio das mulheres metodistas dos Estados Unidos para funcionar como centro de formação para líderes leigas e diaconisas metodistas no Brasil (o Instituto Metodista). A propriedade, vendida pela Igreja Metodista, nas últimas décadas do século passado, havia se transformado na Sede Geral da Igreja Metodista, cenário de reuniões do Colégio Episcopal Metodista e de momentos históricos como a redação do Plano para Vida e Missão da Igreja Metodista.");
                 break;
-            case "zeta":
+            case "ZETA":
                 img_historia.setImageResource(R.drawable.historia_zeta);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "omicron":
+            case "OMICRON":
                 img_historia.setImageResource(R.drawable.historia_zeta);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "lambda":
+            case "LAMBDA":
                 img_historia.setImageResource(R.drawable.historia_lambda);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "psi":
+            case "PSI":
                 img_historia.setImageResource(R.drawable.historia_psi);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "cc":
+            case "CC":
                 img_historia.setImageResource(R.drawable.historia_cc);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "iota":
+            case "IOTA":
                 img_historia.setImageResource(R.drawable.historia_iota);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
-            case "teta":
+            case "TETA":
                 img_historia.setImageResource(R.drawable.historia_teta);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
