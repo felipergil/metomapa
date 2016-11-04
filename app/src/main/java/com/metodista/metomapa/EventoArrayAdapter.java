@@ -31,20 +31,22 @@ public class EventoArrayAdapter extends ArrayAdapter<Evento> {
     public View getView(final int position, View convertView, final ViewGroup parent){
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View linha = inflater.inflate(R.layout.activity_evento, parent, false);
-        TextView nome =(TextView) linha.findViewById(R.id.etxt_nome);
-        TextView predio =(TextView) linha.findViewById(R.id.txt_edificio);
-        TextView data =(TextView) linha.findViewById(R.id.etxt_data);
-        TextView hora =(TextView) linha.findViewById(R.id.etxt_hora);
+        View linha = inflater.inflate(R.layout.activity_lista_eventos, parent, false);
+        TextView nome =(TextView) linha.findViewById(R.id.nome);
+        TextView predio =(TextView) linha.findViewById(R.id.predio);
+        TextView data =(TextView) linha.findViewById(R.id.data);
+        TextView hora =(TextView) linha.findViewById(R.id.hora);
+        TextView sala = (TextView) linha.findViewById(R.id.n_sala);
 
 
 
 
         Evento e = eventos.get(position);
-        nome.setText(e.getNome().toString());
-        predio.setText(e.getLocal().toString());
-        data.setText(e.getData().toString());
-        hora.setText(e.getHora().toString());
+        nome.setText(e.getNome());
+        predio.setText(e.getLocal());
+        data.setText(e.getData());
+        hora.setText(e.getHora());
+        sala.setText(e.getSala());
 
 
         return linha;

@@ -21,28 +21,32 @@
             android:screenOrientation="landscape"
             android:name=".MainActivity">
         </activity>
-        <activity android:name=".EventoActivity">
+        <activity android:name=".EventoActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".HistoriaActivity">
+        <activity android:name=".HistoriaActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroActivity">
+        <activity android:name=".CadastroActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".EventosCadastrados"/>
+        <activity android:name=".EventosCadastrados"
+            android:screenOrientation="portrait"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

@@ -37,15 +37,6 @@
     <Button
         android:layout_width="25dp"
         android:layout_height="20dp"
-        android:id="@+id/btn_omicron"
-        android:layout_marginEnd="12dp"
-        android:background="@drawable/bt_omicron"
-        android:layout_toStartOf="@+id/btn_lambda"
-        android:layout_alignBottom="@+id/btn_lambda" />
-
-    <Button
-        android:layout_width="25dp"
-        android:layout_height="20dp"
         android:id="@+id/btn_capa"
         android:background="@drawable/bt_capa"
         android:layout_centerVertical="true"
@@ -136,16 +127,6 @@
         android:layout_alignTop="@+id/img_user"
         android:layout_toEndOf="@+id/img_user" />
 
-    <TextView
-        android:text="Usuario Nome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_usuario"
-        android:textColor="@color/white"
-        android:textSize="14dp"
-        android:layout_alignBottom="@+id/img_user"
-        android:layout_alignStart="@+id/txt_ola" />
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -173,6 +154,77 @@
         android:layout_above="@+id/btn_cc"
         android:layout_alignEnd="@+id/btn_alfa"
         android:layout_marginEnd="13dp" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_sigma"
+        android:background="@drawable/bt_sigma"
+        android:layout_toStartOf="@+id/btn_omicron"
+        android:layout_alignBottom="@+id/btn_lambda" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_epsilon"
+        android:background="@drawable/bt_epsilon"
+        android:layout_below="@+id/btn_sigma"
+        android:layout_toStartOf="@+id/btn_sigma" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_ro"
+        android:background="@drawable/bt_ro"
+        android:layout_below="@+id/btn_epsilon"
+        android:layout_toStartOf="@+id/btn_ni"
+        android:layout_marginEnd="21dp" />
+
+    <TextView
+        android:text="Usuario Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_usuario"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_alignBottom="@+id/img_user"
+        android:layout_alignStart="@+id/txt_ola" />
+
+    <TextView
+        android:text="Consultar Eventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_evento"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/img_user"
+        android:layout_alignStart="@+id/img_user" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_eventos"
+        android:background="@drawable/evento"
+        android:backgroundTint="@null"
+        android:layout_above="@+id/txt_evento"
+        android:layout_alignStart="@+id/txt_evento" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_ni"
+        android:background="@drawable/bt_ni"
+        android:layout_toStartOf="@+id/btn_epsilon"
+        android:layout_above="@+id/btn_epsilon" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:id="@+id/btn_omicron"
+        android:background="@drawable/bt_omicron"
+        android:layout_alignBottom="@+id/btn_lambda"
+        android:layout_toStartOf="@+id/btn_lambda" />
 
 
 </RelativeLayout>

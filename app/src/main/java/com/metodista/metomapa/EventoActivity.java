@@ -25,6 +25,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.text.ParseException;
 
+import static com.metodista.metomapa.R.id.txt_titulo;
+
 
 public class EventoActivity extends AppCompatActivity {
     private EventoService service = new EventoService();
@@ -44,6 +46,15 @@ public class EventoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evento);
+
+
+        Intent intent = getIntent();
+        Bundle dados = intent.getExtras();
+        String edificio = dados.getString("edificio");
+
+        TextView txt_titulo = (TextView) findViewById(R.id.txt_edificio);
+        txt_titulo.setText("EDIFÍCIO " + edificio.toString().toUpperCase());
+
 
         db = new MetoMapaDB(this);
         String usuario_logado = db.consultar();
@@ -185,6 +196,12 @@ public class EventoActivity extends AppCompatActivity {
 
 
         new EnviarMeusEventosTask(new Evento(nome, predio, data, hora, sala)).execute();
+
+        Toast.makeText(this, "Evento Criado com sucesso!", Toast.LENGTH_SHORT).show();
+
+
+        Intent intent= new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     /**

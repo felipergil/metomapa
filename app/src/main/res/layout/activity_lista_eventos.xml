@@ -3,11 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/nome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
 
     <TextView
         android:id="@+id/data"
@@ -30,7 +25,7 @@
         android:layout_alignStart="@+id/data" />
 
     <TextView
-        android:id="@+id/n_dala"
+        android:id="@+id/n_sala"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -39,53 +34,67 @@
         android:layout_alignStart="@+id/hora" />
 
     <TextView
-        android:text="Sala"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/hora_label"
-        android:layout_alignStart="@+id/hora_label"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/hora" />
-
-    <TextView
-        android:text="Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/data_label"
-        android:layout_above="@+id/data"
-        android:layout_alignLeft="@+id/data"
-        android:layout_alignStart="@+id/data"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
-
-    <TextView
-        android:text="Hora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hora_label"
-        android:layout_below="@+id/data"
-        android:layout_alignLeft="@+id/data_label"
-        android:layout_alignStart="@+id/data_label" />
-
-    <TextView
-        android:id="@+id/predio"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_width="180dp"
-        android:layout_below="@+id/nome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:text="Predio:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
         android:id="@+id/predio_label"
-        android:layout_above="@+id/data"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBaseline="@+id/predio"
+        android:layout_alignBottom="@+id/predio"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/predio"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_width="150dp"
+        android:layout_below="@+id/nome"
+        android:layout_toEndOf="@+id/predio_label" />
+
+    <TextView
+        android:text="Data:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/data_label"
+        android:layout_marginLeft="13dp"
+        android:layout_alignBaseline="@+id/data"
+        android:layout_alignBottom="@+id/data"
+        android:layout_toStartOf="@+id/data" />
+
+    <TextView
+        android:text="Sala:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignBaseline="@+id/n_sala"
+        android:layout_alignBottom="@+id/n_sala"
+        android:layout_alignStart="@+id/hora_label" />
+
+    <TextView
+        android:text="Hora:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hora_label"
+        android:layout_alignBaseline="@+id/hora"
+        android:layout_alignBottom="@+id/hora"
+        android:layout_toStartOf="@+id/hora" />
+
+    <TextView
+        android:text="Nome:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/predio_label"
+        android:id="@+id/nome_label" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp" />
 
 
 </RelativeLayout>

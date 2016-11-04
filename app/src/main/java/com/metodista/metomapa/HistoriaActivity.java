@@ -64,6 +64,7 @@ public class HistoriaActivity extends AppCompatActivity {
                 break;
             case "CC":
                 img_historia.setImageResource(R.drawable.historia_cc);
+                edificio="Centro de convivência";
                 txt_historia.setText("História do edifício " + edificio);
                 break;
             case "IOTA":
@@ -72,6 +73,22 @@ public class HistoriaActivity extends AppCompatActivity {
                 break;
             case "TETA":
                 img_historia.setImageResource(R.drawable.historia_teta);
+                txt_historia.setText("História do edifício " + edificio);
+                break;
+            case "NI":
+                img_historia.setImageResource(R.drawable.historia_ni);
+                txt_historia.setText("História do edifício " + edificio);
+                break;
+            case "SIGMA":
+                img_historia.setImageResource(R.drawable.historia_sigma);
+                txt_historia.setText("História do edifício " + edificio);
+                break;
+            case "EPSILON":
+                img_historia.setImageResource(R.drawable.historia_epsilon);
+                txt_historia.setText("História do edifício " + edificio);
+                break;
+            case "RO":
+                img_historia.setImageResource(R.drawable.historia_ro);
                 txt_historia.setText("História do edifício " + edificio);
                 break;
         }

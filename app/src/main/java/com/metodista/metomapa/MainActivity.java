@@ -18,13 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
     private MetoMapaDB db;
     private String usuario_logado;
+    private int cont =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(cont == 0){
+            apresentarMensagem("- Pressione as letras para ver a história dos edifícios.\n- Mantenha pressionado as letras para criar um evento.");
+            cont++;
+        }
 
-        apresentarMensagem("- Pressione as letras para ver a história dos edifícios.\n- Mantenha pressionado as letras para criar um evento.");
 
         ImageButton btn_cadastro = (ImageButton) findViewById(R.id.btn_cadastro);
         btn_cadastro.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txt_cadastro = (TextView) findViewById(R.id.txt_cadastro);
         if (usuario_logado != null){
             txt_ola.setText("Olá " + usuario_logado + ",");
-            txt_logado.setText("Pressione ou segure pressionado as letras para interagir");
+            txt_logado.setText("Pressione ou mantenha pressionado as letras para interagir");
             btn_cadastro.setVisibility(View.GONE);
             txt_cadastro.setVisibility(View.GONE);
         }else{
@@ -110,6 +114,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                 }
                 return true;
+            }
+        });
+        Button btn_eventos = (Button)findViewById(R.id.btn_eventos);
+        btn_eventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                eventos();
             }
         });
 
@@ -273,6 +284,86 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Edifício Epsilon */
+        Button btn_epsilon = (Button) findViewById(R.id.btn_epsilon);
+        btn_epsilon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ver_historia("epsilon");
+            }
+        });
+        btn_epsilon.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                if (usuario_logado != null){
+                    criar_evento("epsilon");
+                }else{
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }
+                return true;
+            }
+        });
+
+        /* Edifício Sigma */
+        Button btn_sigma = (Button) findViewById(R.id.btn_sigma);
+        btn_sigma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ver_historia("sigma");
+            }
+        });
+        btn_sigma.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                if (usuario_logado != null){
+                    criar_evento("sigma");
+                }else{
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }
+                return true;
+            }
+        });
+
+        /* Edifício NI */
+        Button btn_ni = (Button) findViewById(R.id.btn_ni);
+        btn_ni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ver_historia("ni");
+            }
+        });
+        btn_ni.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                if (usuario_logado != null){
+                    criar_evento("ni");
+                }else{
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }
+                return true;
+            }
+        });
+
+        /* Edifício RO */
+        Button btn_ro = (Button) findViewById(R.id.btn_ro);
+        btn_ro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ver_historia("ro");
+            }
+        });
+        btn_ro.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                if (usuario_logado != null){
+                    criar_evento("ro");
+                }else{
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }
+                return true;
+            }
+        });
+
 
     }
 
@@ -285,8 +376,10 @@ public class MainActivity extends AppCompatActivity {
     /* Ir para página da história do edifício */
     public void ver_historia(String edificio){
         Intent intent_historia = new Intent(this, HistoriaActivity.class);
+
         Bundle dados = new Bundle();
-        dados.putString("edificio", edificio);
+
+        dados.putString("edificio", edificio.toUpperCase());
         intent_historia.putExtras(dados);
         startActivity(intent_historia);
     }
@@ -352,6 +445,11 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    private void eventos(){
+        Intent intent = new Intent(MainActivity.this, EventosCadastrados.class);
+        startActivity(intent);
     }
 
 
